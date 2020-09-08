@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="text-center">Correct Key</h3>
+                        <h3 class="text-center">Correct Flag</h3>
                     </div>
                 </div>
             </div>
@@ -13,15 +13,15 @@
             </button>
         </div>
         <div class="modal-body">
-            <form method="POST" action="{{ script_root }}/admin/keys/{{id}}">
-                <input type="text" id="key-data" class="form-control" name="key" value="{{key}}" placeholder="Enter correct key data">
-                <input type="text" id="key-value" class="form-control" name="pointvalue" value="{{pointvalue}}" placeholder="Enter correct point value">
-                <input type="hidden" id="key-type" name="key_type" value="correct">
-                <input type="hidden" id="key-id">
+            <form method="POST" action="{{ script_root }}/admin/flags/{{id}}">
+                <input type="text" id="flag-content" class="form-control" name="content" value="{{content}}" placeholder="Enter correct flag">
+                <input type="text" id="flag-value" class="form-control" name="data" value="{{data}}" placeholder="Enter correct point value">
+                <input type="hidden" id="type" name="type" value="correct">
+                <input type="hidden" name="id" value="{{ id }}">
                 <hr>
                 <div class="form-group">
                     <input type="hidden" value="{{ nonce }}" name="nonce" id="nonce">
-                    <button id="submit-keys" class="btn btn-success float-right">Update</button>
+                    <button id="submit-flags" class="btn btn-success float-right">Update</button>
                 </div>
             </form>
         </div>
